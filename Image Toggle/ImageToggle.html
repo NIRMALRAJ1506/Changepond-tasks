@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./vijay.webp" id="img1" alt="gg"><br>
+    <strong id="imgName">Vijay</strong>
+    <button type="button" id="btn" onclick="changeImage()">Change Image</button>
+    <script>
+        let  url="./vijay.webp";
+        let url1="./vijay.webp";
+        let vijay="vijay";
+        let gg=url1;
+        function changeImage(){
+            if(vijay=="vijay"){
+            document.getElementById("img1").src="./dhoni.jpg";
+            document.getElementById("imgName").innerHTML="MS Dhoni";
+            vijay="dhoni";
+        }
+        else{
+            document.getElementById("img1").src="./vijay.webp";
+            document.getElementById("imgName").innerHTML="Vijay";
+            vijay="vijay"
+        }
+        }
+    </script>
+</body>
+</html>
