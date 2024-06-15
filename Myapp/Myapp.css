@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.app-container {
+    border: 3px solid red;
+    padding: 10px;
+    border-radius: 10px;
+    width: 320px; /* Increased width to accommodate three buttons per row */
+    margin: auto;
+    box-shadow: 6px 5px 3px;
+    text-align: center; /* Center align content */
+}
+.app-content {
+    display: none; /* Initially hide all app contents */
+}
+.button-row {
+    margin-bottom: 10px; /* Margin between rows */
+    display: flex;
+    justify-content: center; /* Center align buttons horizontally */
+}
+.button-row button {
+    margin: 5px; /* Margin between buttons */
+    padding: 10px 20px; /* Padding inside buttons */
+    font-size: 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.button-row button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+.result {
+    margin-top: 10px;
+}
