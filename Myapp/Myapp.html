@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="app-container" id="app-container">
-        <!-- Calculator App Content -->
+        
         <div id="calculator" class="app-content" style="display: block;">
             <form>
                 <label>Enter First Number
@@ -25,7 +25,7 @@
                 <b>Result: <span id="Result"></span></b><br>
             </form>
         </div>
-        <!-- Temperature Converter App Content -->
+        
         <div id="temperature" class="app-content">
             <form>
                 <label>Enter Temperature in Celsius
@@ -36,7 +36,7 @@
                 <b>Result: <span id="TempResult"></span></b><br>
             </form>
         </div>
-        <!-- Weight Converter App Content -->
+        
         <div id="weight" class="app-content">
             <form>
                 <label>Enter Weight in Grams
@@ -51,7 +51,7 @@
                 Tons: <span id="tonsResult"></span><br>
             </form>
         </div>
-        <!-- Percentage Calculator App Content -->
+        
         <div id="percentage" class="app-content">
             <form>
                 <label>Enter Obtained Marks
@@ -66,7 +66,7 @@
                 Percentage: <span id="perResult"></span><br>
             </form>
         </div>
-        <!-- Age Calculator App Content -->
+        
         <div id="age" class="app-content">
             <form>
                 <label>Enter Birth Date
@@ -84,7 +84,7 @@
                 Age: <span id="ageResult"></span><br>
             </form>
         </div>
-        <!-- Currency Converter App Content -->
+        
         <div id="currency" class="app-content">
             <form>
                 <label>Enter Currency in Rupees
@@ -101,7 +101,7 @@
             </form>
         </div>
     </div>
-    <!-- Buttons to switch between apps -->
+    
     <div class="button-row">
         <button type="button" onclick="showApp('calculator')">Calculator</button>
         <button type="button" onclick="showApp('temperature')">Temperature Converter</button>
@@ -114,18 +114,18 @@
     </div>
 
     <script>
-        // Function to show selected app and hide others
+    
         function showApp(appId) {
-            // Hide all app contents
+            
             document.querySelectorAll('.app-content').forEach(function(app) {
                 app.style.display = 'none';
             });
 
-            // Show the selected app
+          
             document.getElementById(appId).style.display = 'block';
         }
 
-        // Calculator functions
+       
         function addition() {
             let num1 = parseFloat(document.getElementById("fn").value) || 0;
             let num2 = parseFloat(document.getElementById("sn").value) || 0;
@@ -151,38 +151,38 @@
             let num1 = parseFloat(document.getElementById("fn").value) || 0;
             let num2 = parseFloat(document.getElementById("sn").value) || 0;
             let div = num1 / num2;
-            document.getElementById("Result").textContent = div.toFixed(2); // Display division result with two decimal places
+            document.getElementById("Result").textContent = div.toFixed(2); 
         }
 
-        // Temperature converter function
+       
         function convertTemperature() {
             let tempC = parseFloat(document.getElementById("tc").value) || 0;
             let tempF = (tempC * 9/5) + 32;
-            document.getElementById("TempResult").textContent = tempF.toFixed(2); // Display temperature result with two decimal places
+            document.getElementById("TempResult").textContent = tempF.toFixed(2); 
         }
 
-        // Weight converter function
+        
         function convertWeight() {
             let grams = parseFloat(document.getElementById("wc").value) || 0;
             let kg = grams / 1000;
             let pounds = grams * 0.00220462;
             let lbs = grams * 0.00220462;
             let tons = grams / 1000000; 
-            document.getElementById("kgResult").textContent = kg.toFixed(2); // Display kilograms result with two decimal places
-            document.getElementById("poundsResult").textContent = pounds.toFixed(2); // Display pounds result with two decimal places
-            document.getElementById("lbsResult").textContent = lbs.toFixed(2); // Display lbs result with two decimal places
-            document.getElementById("tonsResult").textContent = tons.toFixed(6); // Display tons result with two decimal places
+            document.getElementById("kgResult").textContent = kg.toFixed(2); 
+            document.getElementById("poundsResult").textContent = pounds.toFixed(2); 
+            document.getElementById("lbsResult").textContent = lbs.toFixed(2); 
+            document.getElementById("tonsResult").textContent = tons.toFixed(6); 
         }
 
-        // Percentage calculator function
+        
         function percentagecal() {
             let obtained = parseFloat(document.getElementById("om").value) || 0;
             let total = parseFloat(document.getElementById("tm").value) || 0;
             let percentage = (obtained / total) * 100;
-            document.getElementById("perResult").textContent = percentage.toFixed(2) + "%"; // Display percentage result with two decimal places
+            document.getElementById("perResult").textContent = percentage.toFixed(2) + "%"; 
         }
 
-        // Age calculator function
+        
         function calculateAge() {
             let birthDate = parseInt(document.getElementById("bd").value) || 1;
             let birthMonth = parseInt(document.getElementById("bm").value) || 1;
@@ -190,17 +190,17 @@
 
             let currentDate = new Date();
             let currentYear = currentDate.getFullYear();
-            let currentMonth = currentDate.getMonth() + 1; // getMonth() returns 0-11
+            let currentMonth = currentDate.getMonth() + 1; 
 
             let age = currentYear - birthYear;
             if (currentMonth < birthMonth || (currentMonth === birthMonth && currentDate.getDate() < birthDate)) {
                 age--;
             }
 
-            document.getElementById("ageResult").textContent = age; // Display age
+            document.getElementById("ageResult").textContent = age; 
         }
 
-        // Currency converter functions
+        
         function dollar() {
             let inr = parseFloat(document.getElementById("inr").value) || 0;
             let dollar = inr * 0.014;
