@@ -19,7 +19,7 @@ export class ImagetoggleComp extends Component {
     return (
       <div>
         {this.state.toggle ? <img src={staticData.ajith} alt='ajith' height="300px" width="300px"/>:
-        <img src={staticData.vijay} alt='vijay' height="300px" width="300px"/>
+        <img src={staticData.Vijay} alt='vijay' height="300px" width="300px"/>
         }
         <br/>
         <span>{this.state.imageName}</span>
