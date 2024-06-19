@@ -3,7 +3,7 @@ import staticData from '../Shared/Constant/staticData';
 
 const multiImages = [
   { src: staticData.ajith, name: 'Ajith Kumar' },
-  { src: staticData.vijay, name: 'Vijay' },
+  { src: staticData.Vijay, name: 'Vijay' },
   { src: staticData.dhoni, name: 'Dhoni' },
   { src: staticData.vk, name: 'Virat Kohli' },
   { src: staticData.messi, name: 'Messi' }
